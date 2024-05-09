@@ -44,4 +44,5 @@
   width: 100vh; /* Ancho deseado */
   height: 100vh; /* Alto deseado */
   background-color: #9f9090;
+  /* overflow: "hidden" */
 }
