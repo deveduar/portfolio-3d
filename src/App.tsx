@@ -1,26 +1,9 @@
-import { useState, useRef } from "react";
+// App.js
+import { useState } from "react";
 import "./App.css";
-import { Canvas, useFrame } from "@react-three/fiber";
-import { Mesh } from "three";
+import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-
-
-function RotatingMesh() {
- const meshRef = useRef<Mesh>(null!);
-
-  useFrame(() => {
-    if (meshRef.current) {
-      // meshRef.current.rotation.y += 0.01;
-    }
-  });
-
-  return (
-    <mesh ref={meshRef}>
-      <boxGeometry args={[5, 4, 4, 5]} />
-      <meshNormalMaterial />
-    </mesh>
-  );
-}
+import RotatingMesh from "./mesh";
 
 function App() {
   const [count, setCount] = useState(0);
