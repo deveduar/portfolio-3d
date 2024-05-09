@@ -8,13 +8,13 @@ function RotatingMesh() {
 
   useFrame(() => {
     if (meshRef.current) {
-      meshRef.current.rotation.y += 0.01;
+    //   meshRef.current.rotation.y += 0.01;
     }
   });
 
   return (
     <mesh ref={meshRef} onWheel={(e) => e.stopPropagation()}>
-      <boxGeometry args={[5, 4, 4, 5]} />
+      <boxGeometry args={[2, 2, 2]} />
       <meshNormalMaterial />
     </mesh>
   );
