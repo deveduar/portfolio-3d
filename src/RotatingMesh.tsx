@@ -15,7 +15,9 @@ function RotatingMesh() {
   return (
     <mesh ref={meshRef} onWheel={(e) => e.stopPropagation()}>
       <boxGeometry args={[2, 2, 2]} />
-      <meshNormalMaterial />
+      {/* <meshNormalMaterial /> */}
+    <meshStandardMaterial color={"blue"} wireframe>
+    </meshStandardMaterial>
     </mesh>
   );
 }

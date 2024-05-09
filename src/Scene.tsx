@@ -1,15 +1,21 @@
 import { Canvas } from "@react-three/fiber";
 import { OrbitControls } from "@react-three/drei";
-import Mesh from "./mesh";
+import { ReactNode } from "react";
 
-function Scene() {
+interface SceneProps {
+  children: ReactNode;
+}
+
+function Scene({ children }: SceneProps) {
+  
+
   return (
     <div className="canvas-container">
       <Canvas>
-        <ambientLight intensity={0.1} />
+        {children}
+        <ambientLight intensity={0.5} />
         <directionalLight color="white" position={[0, 0, 5]} />
         <OrbitControls />
-        <Mesh />
       </Canvas>
     </div>
   );
