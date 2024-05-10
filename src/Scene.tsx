@@ -27,7 +27,7 @@ function Scene({ children }: SceneProps) {
     <div className="canvas-container" ref={canvasRef}>
       <Canvas>
         {children}
-        <ambientLight intensity={0.5} />
+        <ambientLight intensity={12} />
         <directionalLight color="white" position={[0, 0, 5]} />
         <OrbitControls />
       </Canvas>

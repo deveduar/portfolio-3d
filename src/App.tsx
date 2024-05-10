@@ -9,11 +9,13 @@ function App() {
 
   return (
     <>
-      <h1>Deveduar</h1>
+      {/* <h1>Deveduar</h1> */}
       <Scene>
-        <Mesh />
+        <Mesh position={[0, 0, 0]} />
+        <Mesh position={[1.5, 0, 0]} />
+        <Mesh position={[-1.5, 0, 0]} />
       </Scene>
-      
+
       <div className="card">
         <button onClick={() => setCount(count + 1)}>count is {count}</button>
       </div>
